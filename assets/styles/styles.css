@@ -1,0 +1,181 @@
+:root {
+    --bg-principal: #F3E9DC;
+    --texto-principal: #3E3E3E;
+    --texto-secundario: #6E665F;
+    --primario-amber: #FFC107;
+    --secundario-malta: #6C584C;
+    --acento-lupulo: #2E8B57;
+    --error: #B00020;
+    --blanco-puro: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-custom {
+    background-color: var(--secundario-malta);
+    padding: 1rem 0;
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--blanco-puro) !important;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-brand img {
+    height: 80px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.navbar-custom .nav-link {
+    color: var(--bg-principal) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--primario-amber) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(108, 88, 76, 0.7), rgba(108, 88, 76, 0.7)), url('/assets/img/hero-img.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: var(--blanco-puro);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-primary-custom {
+    background-color: var(--primario-amber);
+    border-color: var(--primario-amber);
+    color: var(--texto-principal);
+    font-weight: bold;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #e6ac00;
+    border-color: #e6ac00;
+    color: var(--texto-principal);
+    transform: translateY(-2px);
+}
+
+.card-custom {
+    background-color: var(--blanco-puro);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+.card-custom .card-title {
+    color: var(--secundario-malta);
+    font-weight: bold;
+}
+
+.card-custom .card-text {
+    color: var(--texto-secundario);
+}
+
+.badge-nuevo {
+    background-color: var(--acento-lupulo);
+    color: var(--blanco-puro);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.badge-popular {
+    background-color: var(--primario-amber);
+    color: var(--texto-principal);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.section-title {
+    color: var(--secundario-malta);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+.about-section {
+    background-color: var(--blanco-puro);
+}
+
+.footer-custom {
+    background-color: var(--secundario-malta);
+    color: var(--bg-principal);
+    padding: 3rem 0 1rem 0;
+}
+
+.footer-custom h5 {
+    color: var(--blanco-puro);
+    margin-bottom: 1rem;
+}
+
+.footer-custom a {
+    color: var(--bg-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+    color: var(--primario-amber);
+}
+
+.price {
+    color: var(--acento-lupulo);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.stats-section {
+    background-color: var(--secundario-malta);
+    color: var(--blanco-puro);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primario-amber);
+}
+
+.form-control:focus {
+    border-color: var(--primario-amber);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
