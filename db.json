@@ -1,0 +1,419 @@
+{
+    "featured": [
+        {
+            "id": 5,
+            "name": "Especiales Brew 926",
+            "description": "Ediciones limitadas, sabores únicos y experimentales.",
+            "price": "12224 CLP",
+            "category": "Especiales",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 6,
+            "name": "Porter Brew 118",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "17353 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 8,
+            "name": "Red Ale Brew 724",
+            "description": "Color rojizo y sabor a maltas tostadas.",
+            "price": "18928 CLP",
+            "category": "Red Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 9,
+            "name": "Stout Brew 135",
+            "description": "Oscura con notas de café y chocolate tostado.",
+            "price": "14452 CLP",
+            "category": "Stout",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 10,
+            "name": "Stout Brew 697",
+            "description": "Oscura con notas de café y chocolate tostado.",
+            "price": "10351 CLP",
+            "category": "Stout",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 13,
+            "name": "Amber Brew 403",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "16704 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 14,
+            "name": "Wheat Brew 379",
+            "description": "Ligera y refrescante con trigo y toque cítrico.",
+            "price": "11447 CLP",
+            "category": "Wheat",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 15,
+            "name": "IPA Brew 424",
+            "description": "Intensa en lúpulo, aroma cítrico y amargor marcado.",
+            "price": "17212 CLP",
+            "category": "IPA",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 17,
+            "name": "IPA Brew 423",
+            "description": "Intensa en lúpulo, aroma cítrico y amargor marcado.",
+            "price": "13179 CLP",
+            "category": "IPA",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 19,
+            "name": "Porter Brew 168",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "10874 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 23,
+            "name": "Amber Brew 582",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "16443 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 24,
+            "name": "Wheat Brew 815",
+            "description": "Ligera y refrescante con trigo y toque cítrico.",
+            "price": "10463 CLP",
+            "category": "Wheat",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 25,
+            "name": "Porter Brew 611",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "13154 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 27,
+            "name": "Porter Brew 880",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "10025 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 29,
+            "name": "Lager Brew 722",
+            "description": "Clara, suave, fácil de tomar.",
+            "price": "14399 CLP",
+            "category": "Lager",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Amber Brew 999",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "13003 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 2,
+            "name": "Porter Brew 698",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "18159 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 3,
+            "name": "IPA Brew 937",
+            "description": "Intensa en lúpulo, aroma cítrico y amargor marcado.",
+            "price": "14116 CLP",
+            "category": "IPA",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 4,
+            "name": "Pale Ale Brew 573",
+            "description": "Equilibrada, de amargor suave y sabor fresco.",
+            "price": "11422 CLP",
+            "category": "Pale Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 5,
+            "name": "Especiales Brew 926",
+            "description": "Ediciones limitadas, sabores únicos y experimentales.",
+            "price": "12224 CLP",
+            "category": "Especiales",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 6,
+            "name": "Porter Brew 118",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "17353 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 7,
+            "name": "Especiales Brew 681",
+            "description": "Ediciones limitadas, sabores únicos y experimentales.",
+            "price": "18254 CLP",
+            "category": "Especiales",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 8,
+            "name": "Red Ale Brew 724",
+            "description": "Color rojizo y sabor a maltas tostadas.",
+            "price": "18928 CLP",
+            "category": "Red Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 9,
+            "name": "Stout Brew 135",
+            "description": "Oscura con notas de café y chocolate tostado.",
+            "price": "14452 CLP",
+            "category": "Stout",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 10,
+            "name": "Stout Brew 697",
+            "description": "Oscura con notas de café y chocolate tostado.",
+            "price": "10351 CLP",
+            "category": "Stout",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 11,
+            "name": "Red Ale Brew 355",
+            "description": "Color rojizo y sabor a maltas tostadas.",
+            "price": "16374 CLP",
+            "category": "Red Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 12,
+            "name": "Especiales Brew 667",
+            "description": "Ediciones limitadas, sabores únicos y experimentales.",
+            "price": "13514 CLP",
+            "category": "Especiales",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 13,
+            "name": "Amber Brew 403",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "16704 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 14,
+            "name": "Wheat Brew 379",
+            "description": "Ligera y refrescante con trigo y toque cítrico.",
+            "price": "11447 CLP",
+            "category": "Wheat",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 15,
+            "name": "IPA Brew 424",
+            "description": "Intensa en lúpulo, aroma cítrico y amargor marcado.",
+            "price": "17212 CLP",
+            "category": "IPA",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 16,
+            "name": "Pale Ale Brew 224",
+            "description": "Equilibrada, de amargor suave y sabor fresco.",
+            "price": "18210 CLP",
+            "category": "Pale Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 17,
+            "name": "IPA Brew 423",
+            "description": "Intensa en lúpulo, aroma cítrico y amargor marcado.",
+            "price": "13179 CLP",
+            "category": "IPA",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 18,
+            "name": "Sour Brew 522",
+            "description": "Ácida y afrutada, perfecta para algo diferente.",
+            "price": "17842 CLP",
+            "category": "Sour",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 19,
+            "name": "Porter Brew 168",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "10874 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 20,
+            "name": "Red Ale Brew 886",
+            "description": "Color rojizo y sabor a maltas tostadas.",
+            "price": "18313 CLP",
+            "category": "Red Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 21,
+            "name": "Amber Brew 237",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "13015 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 22,
+            "name": "Sour Brew 628",
+            "description": "Ácida y afrutada, perfecta para algo diferente.",
+            "price": "17739 CLP",
+            "category": "Sour",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 23,
+            "name": "Amber Brew 582",
+            "description": "Ambarina, con balance entre maltas y lúpulo.",
+            "price": "16443 CLP",
+            "category": "Amber",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 24,
+            "name": "Wheat Brew 815",
+            "description": "Ligera y refrescante con trigo y toque cítrico.",
+            "price": "10463 CLP",
+            "category": "Wheat",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 25,
+            "name": "Porter Brew 611",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "13154 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 26,
+            "name": "Red Ale Brew 659",
+            "description": "Color rojizo y sabor a maltas tostadas.",
+            "price": "13690 CLP",
+            "category": "Red Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 27,
+            "name": "Porter Brew 880",
+            "description": "Densa y oscura, perfecta para paladares exigentes.",
+            "price": "10025 CLP",
+            "category": "Porter",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 28,
+            "name": "Stout Brew 712",
+            "description": "Oscura con notas de café y chocolate tostado.",
+            "price": "16873 CLP",
+            "category": "Stout",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        },
+        {
+            "id": 29,
+            "name": "Lager Brew 722",
+            "description": "Clara, suave, fácil de tomar.",
+            "price": "14399 CLP",
+            "category": "Lager",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": true
+        },
+        {
+            "id": 30,
+            "name": "Pale Ale Brew 438",
+            "description": "Equilibrada, de amargor suave y sabor fresco.",
+            "price": "12512 CLP",
+            "category": "Pale Ale",
+            "image": "/assets/img/producto-generica.png",
+            "isFeatured": false
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "admin",
+            "role": "admin"
+        }
+    ]
+}
