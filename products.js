@@ -59,7 +59,10 @@ function renderProductos() {
           <p class="card-text">${producto.description}</p>
           <div class="d-flex justify-content-between align-items-center">
             <span class="price">${producto.price}</span>
-            <button class="btn btn-primary-custom btn-sm">Agregar</button>
+            <input type="number" min="1" value="1" class="form-control form-control-sm w-25" id="cantidad-${producto.id}">
+            <button class="btn btn-primary-custom btn-sm" onclick="agregarAlCarrito(${producto.id})">
+              Agregar
+            </button>
           </div>
         </div>
       </div>

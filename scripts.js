@@ -41,25 +41,40 @@ document.addEventListener("DOMContentLoaded", () => {
 let carrito = [];
 
 function agregarAlCarrito(id) {
-  fetch("db.json")
-    .then(res => res.json())
-    .then(data => {
-      const producto = data.products.find(p => p.id === id);
-      const inputCantidad = document.getElementById(`cantidad-${id}`);
-      const cantidad = parseInt(inputCantidad.value);
+  // busca si hay productos ya agregados
+  let producto = null;
 
-      if (!producto || cantidad < 1) return;
+  if (typeof productos !== "undefined" && productos.length > 0) {
+    producto = productos.find(p => p.id === id);
+  }
 
-      const existente = carrito.find(p => p.id === id);
-      if (existente) {
-        existente.cantidad += cantidad;
-      } else {
-        carrito.push({ ...producto, cantidad });
-      }
+  // 
+  const cargarProducto = producto
+    ? Promise.resolve(producto)
+    : fetch("db.json")
+        .then(res => res.json())
+        .then(data => data.products.find(p => p.id === id));
 
-      renderCarrito();
-    });
+  cargarProducto.then(producto => {
+    if (!producto) return;
+
+    const inputCantidad = document.getElementById(`cantidad-${id}`);
+    const cantidad = inputCantidad ? parseInt(inputCantidad.value) : 1;
+
+    if (cantidad < 1) return;
+
+    const existente = carrito.find(p => p.id === id);
+    if (existente) {
+      existente.cantidad += cantidad;
+    } else {
+      carrito.push({ ...producto, cantidad });
+    }
+
+    renderCarrito();
+  });
 }
+
+
 
 function calcularTotal() {
   let total = 0;
@@ -80,6 +95,13 @@ function renderCarrito() {
 
   if (carrito.length === 0) {
     contenedor.innerHTML = "<p class='text-muted'>Tu carrito está vacío.</p>";
+
+    // reset
+    const totalElement = document.getElementById("carrito-total");
+    if (totalElement) {
+      totalElement.textContent = "$0 CLP";
+    }
+
     return;
   }
 
@@ -97,15 +119,18 @@ function renderCarrito() {
           <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${item.id}, -1)">-</button>
           <span>${item.cantidad}</span>
           <button class="btn btn-sm btn-outline-secondary" onclick="cambiarCantidad(${item.id}, 1)">+</button>
-          <button class="btn btn-sm btn-outline-danger" onclick="eliminarDelCarrito(${item.id})"><i class="fas fa-trash"></i></button>
+          <button class="btn btn-sm btn-outline-danger" onclick="eliminarDelCarrito(${item.id})">
+            <i class="fas fa-trash"></i>
+          </button>
         </div>
       </div>
     `;
-
     contenedor.appendChild(fila);
-    calcularTotal()
   });
+
+  calcularTotal(); // vuelve a calcular al final
 }
+
 
 function cambiarCantidad(id, cambio) {
   const item = carrito.find(p => p.id === id);
@@ -136,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
 
   if (usuarioActual) {
-    // Usuario logeado
+    // revisar si hay una sesion
     navAuth.innerHTML = `
       <li class="nav-item">
         <a class="nav-link" href="perfil.html">Perfil (${usuarioActual.username})</a>
@@ -146,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
     `;
 
-    // Listener para cerrar sesión
+    // btn cerrar sesion
     document.getElementById("logout-link").addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("usuarioActual");
@@ -154,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   } else {
-    // No hay sesión → mostrar Iniciar Sesión
+    // si no hay sesion agrega el btn iniciar sesion
     navAuth.innerHTML = `
       <li class="nav-item">
         <a href="/pages/login.html" class="btn btn-primary-custom btn-sm ms-2">Iniciar Sesión</a>
