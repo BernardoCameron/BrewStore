@@ -1,7 +1,41 @@
+  const usuarios = [
+    { username: "admin", email: "admin@brewstore.com", password: "admin" }
+  ];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("registerForm");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!username || !email || !password) {
+        alert("Todos los campos son obligatorios.");
+        return;
+      }
+
+      const existe = usuarios.find(u => u.username === username || u.email === email);
+      if (existe) {
+        alert("El nombre de usuario o correo ya está registrado.");
+        return;
+      }
+
+      usuarios.push({ username, email, password });
+      console.log("Usuarios registrados:", usuarios);
+      alert("Registro exitoso. Ahora puedes iniciar sesión.");
+      window.location.href = "login.html";
+    });
+  });
+
+
+
 
 //cards index, top 6 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("db.json")
+  fetch("/db.json")
     .then(res => res.json())
     .then(data => {
       const productos = data.products.slice(0, 6);
@@ -127,3 +161,5 @@ function finalizarCompra() {
   carrito = [];
   renderCarrito();
 }
+
+
