@@ -1,38 +1,3 @@
-  const usuarios = [
-    { username: "admin", email: "admin@brewstore.com", password: "admin" }
-  ];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("registerForm");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
-
-      if (!username || !email || !password) {
-        alert("Todos los campos son obligatorios.");
-        return;
-      }
-
-      const existe = usuarios.find(u => u.username === username || u.email === email);
-      if (existe) {
-        alert("El nombre de usuario o correo ya está registrado.");
-        return;
-      }
-
-      usuarios.push({ username, email, password });
-      console.log("Usuarios registrados:", usuarios);
-      alert("Registro exitoso. Ahora puedes iniciar sesión.");
-      window.location.href = "login.html";
-    });
-  });
-
-
-
-
 //cards index, top 6 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("/db.json")
@@ -162,4 +127,38 @@ function finalizarCompra() {
   renderCarrito();
 }
 
+//render btn login/iniciar
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navAuth = document.getElementById("navbar-auth");
+  if (!navAuth) return;
+
+  const usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+
+  if (usuarioActual) {
+    // Usuario logeado
+    navAuth.innerHTML = `
+      <li class="nav-item">
+        <a class="nav-link" href="perfil.html">Perfil (${usuarioActual.username})</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-danger" href="#" id="logout-link">Cerrar Sesión</a>
+      </li>
+    `;
+
+    // Listener para cerrar sesión
+    document.getElementById("logout-link").addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("usuarioActual");
+      window.location.href = "../BrewStore/index.html";
+    });
+
+  } else {
+    // No hay sesión → mostrar Iniciar Sesión
+    navAuth.innerHTML = `
+      <li class="nav-item">
+        <a href="/pages/login.html" class="btn btn-primary-custom btn-sm ms-2">Iniciar Sesión</a>
+      </li>
+    `;
+  }
+});

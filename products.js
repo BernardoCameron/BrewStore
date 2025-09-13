@@ -1,17 +1,16 @@
 let productos = [];
 let productosFiltrados = [];
 let paginaActual = 1;
-const porPagina = 6; // productos por página
+const porPagina = 6;
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Ruta corregida: products.html está en /assets/pages/
   fetch("../db.json")
     .then(res => {
       if (!res.ok) throw new Error("No se pudo cargar db.json");
       return res.json();
     })
     .then(data => {
-      console.log("Datos cargados:", data); // debug
+      console.log("Datos cargados:", data);
       productos = data.products || [];
       productosFiltrados = productos;
       renderProductos();
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Error al cargar productos:", err));
 
-  // Listener del filtro
+
   const filtro = document.getElementById("categoriaFiltro");
   if (filtro) {
     filtro.addEventListener("change", (e) => {
@@ -40,7 +39,6 @@ function renderProductos() {
   if (!contenedor) return;
   contenedor.innerHTML = "";
 
-  // Calcular rango de productos en esta página
   const inicio = (paginaActual - 1) * porPagina;
   const fin = inicio + porPagina;
   const productosPagina = productosFiltrados.slice(inicio, fin);

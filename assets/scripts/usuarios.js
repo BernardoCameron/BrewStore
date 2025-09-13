@@ -1,20 +1,25 @@
-// ===========================
-// Gestión de usuarios con localStorage
-// ===========================
-
-// Obtener usuarios (si no existen, inicializa con admin)
 function getUsuarios() {
   return JSON.parse(localStorage.getItem("usuarios")) || [
     { username: "admin", email: "admin@brewstore.com", password: "admin" }
   ];
 }
 
-// Guardar usuarios en localStorage
+if (user) {
+  alert("¡Bienvenido " + user.username + "!");
+  localStorage.setItem("usuarioActual", JSON.stringify(user)); // ⬅️ guardar en localStorage
+  window.location.href = "perfil.html";
+}
+
+document.getElementById("logout-btn").addEventListener("click", () => {
+  localStorage.removeItem("usuarioActual");
+  alert("Sesión cerrada.");
+  window.location.href = "login.html";
+});
+
 function saveUsuarios(usuarios) {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
-// Registrar nuevo usuario
 function addUsuario(username, email, password) {
   const usuarios = getUsuarios();
 
@@ -27,19 +32,16 @@ function addUsuario(username, email, password) {
   return true;
 }
 
-// Buscar usuario por username + password
 function findUsuario(username, password) {
   const usuarios = getUsuarios();
   return usuarios.find(u => u.username === username && u.password === password);
 }
 
-// Buscar usuario por username
 function findUsuarioByName(username) {
   const usuarios = getUsuarios();
   return usuarios.find(u => u.username === username);
 }
 
-// Actualizar datos de usuario
 function updateUsuario(oldUsername, newUsername, newEmail, newPassword) {
   const usuarios = getUsuarios();
   const index = usuarios.findIndex(u => u.username === oldUsername);
@@ -53,8 +55,6 @@ function updateUsuario(oldUsername, newUsername, newEmail, newPassword) {
   }
   return null;
 }
-
-// Resetear a solo admin (útil para pruebas)
 function resetUsuarios() {
   localStorage.setItem("usuarios", JSON.stringify([
     { username: "admin", email: "admin@brewstore.com", password: "admin" }
