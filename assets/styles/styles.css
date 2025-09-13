@@ -14,7 +14,7 @@ body {
     color: var(--texto-principal);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+    
 .navbar-custom {
     background-color: var(--secundario-malta);
     padding: 1rem 0;
